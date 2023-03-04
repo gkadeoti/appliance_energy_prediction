@@ -16,8 +16,10 @@ For more information about the house, data collection, R scripts and figures, pl
 
 [Web Link](https://github.com/LuisM78/Appliances-energy-prediction-data)
 
----
+
 ### Attribute Information:
+
+```
 
 date time year-month-day hour:minute:second
 Appliances, energy use in Wh
@@ -48,11 +50,34 @@ Visibility (from Chievres weather station), in km
 Tdewpoint (from Chievres weather station), Â°C
 rv1, Random variable 1, nondimensional
 rv2, Random variable 2, nondimensional
+```
 
 Where indicated, hourly data (then interpolated) from the nearest airport weather station (Chievres Airport, Belgium) was downloaded from a public data set from Reliable Prognosis, rp5.ru. Permission was obtained from Reliable Prognosis for the distribution of the 4.5 months of weather data.
----
+
+
+
 
 ## Environment Setup
+
+If your `conda` base environment is old, it is important that you install the `setuptools` and `wheel` packages that are dependencies for autogluon
+```
+pip install setuptools wheel
+
+Step 1: Create Environment
+```
+conda create --name applianceenv python=3.9 -y
+```
+
+Step 2: Actovate Environment
+```
+conda activate applianceenv
+
+Setp 3: Install required packages: autogluon, streamlit, jupyter
+```bash
+pip install torch==1.13.1 torchvision==0.14.1 -f https://download.pytorch.org/whl/cpu/torch_stable.html
+pip install autogluon streamlit jupyter
+
+
 
 ## Code Structure
 
