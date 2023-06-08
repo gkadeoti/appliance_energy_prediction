@@ -68,7 +68,7 @@ Step 1: Create Environment
 conda create --name applianceenv python=3.9 -y
 ```
 
-Step 2: Actovate Environment
+Step 2: Activate Environment
 ```
 conda activate applianceenv
 
